@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     build:
-    parallelism: 1
+    parallelism: 10
     machine:
        image: ubuntu-2004:202101-01
     working_directory: ~/project
@@ -11,3 +11,4 @@ jobs:
       - run: |
           pip install --upgrade pip
           chmod +x set-up.sh
+          ./set-up.sh
